@@ -1,71 +1,90 @@
 // 1.
-// Complete the following function
-// It should return `true` if the first argument is greater than the second and `false` if not
-// Use the greater than operator `>`
+// Define a function max() that takes two numbers as arguments and returns the largest of them. Use the if-then-else construct available in JavaScript.
 // A:
-var evaluateGreaterThan = function(num1, num2) {
-  return num1 > num2;
-}
 
-console.assert(evaluateGreaterThan(3, 2) === true);
+var max1 = function max(num1,num2) {
+  if (num1 > num2) {
+    return num1;
+  } else {
+    return num2;
+  }
+}
 
 
 // 2.
-// Call the `evaluateGreaterThan` function in the condition for the following if statement
-// Provide arguments to `evaluateGreaterThan` which make the if statement log 'Less than or equal to'
-// A.
-if (evaluateGreaterThan === true) {
-  console.log('Greater than');
-} else {
-  console.log('Less than or equal to');
-}
+// Define a function maxOfThree() that takes three numbers as arguments and returns the largest of them.
+// A:
 
+function maxOfThree(num1,num2,num3){
+  if (num1 > num2 && num1 > num3) {
+    return num1;
+  } else if (num2 > num1 && num2 > num3) {
+    return num2;
+  } else {
+    return num3;
+  }
+}
 
 // 3.
-// Refactor the `evaluateGreaterThan` function to match the following specs:
-// It returns 'Greater than' if the first argument is greater than the second
-// It returns 'Less than' if the first argument is less than the second
-// It returns 'Equal to' if the first argument is equal to the second
+// Write a function that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise.
 // A:
-evaluateGreaterThan = function(num1, num2) {
-  // Your answer here
-  if (num1 > num2) {
-    return "Greater than";
-  }
-  if (num1 < num2) {
-    return "Less than";
-  }
-  if (num1 === num2) {
-    return "Equal to";
-  }
-}
 
-console.assert(evaluateGreaterThan(3, 2) === 'Greater than');
-console.assert(evaluateGreaterThan(1, 2) === 'Less than');
-console.assert(evaluateGreaterThan(2, 2) === 'Equal to');
+function isVowel(char){
+    return letter === "a" || letter === "e" || letter ==="i" || letter ==="o" || letter === "u";
+}
 
 
 // 4.
-// If necessary, refactor `evaluateGreaterThan` so that the `Equal to` condition works even if a number string is provided as an argument
+// Write a function called `sum` that takes two parameters and returns the sum of those 2 numbers.
 // A:
-evaluateGreaterThan = function(num1, num2) {
-  // Your answer here
+
+function sum(num1,num2) {
+  return num1 + num2;
 }
-
-console.assert(evaluateGreaterThan("3", 2) === 'Greater than');
-console.assert(evaluateGreaterThan(1, "2") === 'Less than');
-console.assert(evaluateGreaterThan(2, "2") === 'Equal to');
-
-
 // 5.
-// The below function does not work. The variable
-// twoPlusTwo gets set to `undefined`. Refactor
-// the function to make it work.
-function addNumbers(numberA, numberB) {
-    console.log(numberA + numberB);
-    return numberA + numberB;
+// Write a function named `avg` that takes 3 parameters and returns the average of those 3 numbers.
+// A:
+function avg(num1,num2,num3) {
+  return (num1 + num2 + num3) / 3
 }
 
-var twoPlusTwo = addNumbers(2, 2)
+// 6.
+// Write a function called `getLength` that takes one parameter (a string) and returns the length
+// A:
+function getLength(string) {
+  return string.length
+}
 
-console.assert(twoPlusTwo === 4)
+// 7.
+// Write a function called `greaterThan` that takes two parameters
+// and returns `true` if the second parameter is greater than the first.
+// Otherwise the function should return `false`.
+// A:
+function greaterThan(num1,num2) {
+  return num2 > num1;
+}
+
+
+// 8.
+// Write a function called `greet` that takes a
+// single parameter and returns a string that
+// is formated like "Hello, Name!" where *Name*
+// is the parameter that was passed in.
+// A:
+function greet(name) {
+  return "Hello, " + name + "!";
+}
+console.log(greet("Ryan"))
+
+// 9.
+// Write a function called `madlib` that takes 4 or more parameters (words).
+// The function should insert the words into a pre-defined sentence.
+// Finally the function should return that sentence.
+// Note: When I say words and sentence I mean strings. For example:
+// words: "quick", "fox", "fence"
+// sentence: "quick brown fox jumps over the fence"
+// A:
+function madlib(string1,string2,string3,string4) {
+  return string1 + " has a " + string2 + " which is why " + string3 + " needs a " +
+  string4 + ".";
+}
